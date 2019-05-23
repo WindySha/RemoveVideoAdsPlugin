@@ -1,4 +1,4 @@
-![](https://upload-images.jianshu.io/upload_images/1639238-d39849bfa8575dca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/300)
+![](https://upload-images.jianshu.io/upload_images/1639238-d39849bfa8575dca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/280)
 ## 简介
 这是一个Xposed插件（apk），目前有两个功能：
 1. 去除腾讯视频App播放视频前的广告
@@ -42,7 +42,7 @@ $ java -jar ../xpatch.jar ../tencent_video.apk -xm ../xposed_plugin.apk
 ```
 
 ## 关注更多内容
-欢迎关注个人技术公众号**Android葵花宝典**，获取更多的android逆向知识。
+欢迎关注个人技术公众号**Android葵花宝典**，获取更多的android逆向知识。  
 ![](https://upload-images.jianshu.io/upload_images/1639238-ab6e0fceabfffdda.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/180)
 ## 声明
 **本工程的内容仅能用于学习和研究，请勿用于任何商业用途，否则由此带来的法律责任由操作者自己承担，和本人无关。**
