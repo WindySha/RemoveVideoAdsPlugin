@@ -8,11 +8,7 @@
 
 ## APK下载
 进入Release页面下载
-或者[点我下载](https://github.com/WindySha/RemoveVideoAdsPlugin/releases/download/v1.0/no_ads_v1.0.apk)
-
-## 注意事项
-目前对爱奇艺去广告的支持还不是太好，第一次播放视频依旧有广告。
-需要打开某视频播放页，再退出播放页，再进入播放页，则不会播放广告。
+或者[点我下载](https://github.com/WindySha/RemoveVideoAdsPlugin/releases/download/v1.1/no-ads-v1.1.apk)
 
 ## 使用方法
 ### Root环境:
