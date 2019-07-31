@@ -1,9 +1,11 @@
 package com.wind.fuckads.hook
 
 import de.robv.android.xposed.IXposedHookLoadPackage
+import de.robv.android.xposed.XC_MethodHook
 import de.robv.android.xposed.XC_MethodReplacement
 import de.robv.android.xposed.XposedHelpers
 import de.robv.android.xposed.callbacks.XC_LoadPackage
+import java.util.*
 
 /**
  * Created by Wind
@@ -28,6 +30,17 @@ class IQiyiHook : IXposedHookLoadPackage {
             object : XC_MethodReplacement() {
                 override fun replaceHookedMethod(param: MethodHookParam?): Any? {
                     return null
+                }
+            })
+
+        XposedHelpers.findAndHookMethod(Properties::class.java,
+            "getProperty",
+            String::class.java,
+            object : XC_MethodHook() {
+                override fun beforeHookedMethod(param: MethodHookParam) {
+                    if ("qiyi.export.key" == param.args[0]) {
+                        param.result = "59e36a5e70e4c4efc6fcbc4db7ea59c1"
+                    }
                 }
             })
     }
