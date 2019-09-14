@@ -1,6 +1,7 @@
 package com.wind.fuckads
 
 import com.wind.fuckads.hook.IQiyiHook
+import com.wind.fuckads.hook.KuwoVipHook
 import com.wind.fuckads.hook.TencentVideoHook
 import de.robv.android.xposed.IXposedHookLoadPackage
 import de.robv.android.xposed.callbacks.XC_LoadPackage
@@ -24,7 +25,8 @@ object HookManager {
         registHookClass(
             arrayListOf(
                 TencentVideoHook(),
-                IQiyiHook()
+                IQiyiHook(),
+                KuwoVipHook()
             )
         )
     }
