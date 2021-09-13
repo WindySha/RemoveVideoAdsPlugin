@@ -2,9 +2,11 @@ package com.wind.fuckads.hook
 
 import de.robv.android.xposed.IXposedHookLoadPackage
 import de.robv.android.xposed.XC_MethodHook
+import de.robv.android.xposed.XC_MethodHook.MethodHookParam
 import de.robv.android.xposed.XC_MethodReplacement
 import de.robv.android.xposed.XposedHelpers
 import de.robv.android.xposed.callbacks.XC_LoadPackage
+import java.lang.Exception
 
 class KuwoVipHook : IXposedHookLoadPackage {
     private val KUWO_MUSIC_PACAKGENAME_ARRAY = arrayOf("cn.kuwo.player", "cn.kuwo.kwmusichd")
@@ -39,6 +41,21 @@ class KuwoVipHook : IXposedHookLoadPackage {
             )
         } catch (t: Throwable) {
             t.printStackTrace()
+        }
+
+        // Kuwo Music: versionCode: 9441     versionName: 9.4.4.1
+        try {
+            XposedHelpers.findAndHookMethod("cn.kuwo.peculiar.speciallogic.d", classLoader,
+                "a", Long::class.javaPrimitiveType, MutableList::class.java,
+                object : XC_MethodHook() {
+                    @Throws(Throwable::class)
+                    override fun beforeHookedMethod(param: MethodHookParam) {
+                        param.result = true
+                        super.beforeHookedMethod(param)
+                    }
+                })
+        } catch (e: Exception) {
+            e.printStackTrace()
         }
     }
 

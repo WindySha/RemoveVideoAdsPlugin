@@ -3,9 +3,7 @@
 
     <string name="function_intro_title">功能简介</string>
     <string name="function_intro_content">
-        这是一个Xposed插件，用于去除主流视频播放器的视频广告。当前支持的视频客户端有：\n
-        &#160;&#160;&#160;&#160;1. 腾讯视频\n
-        &#160;&#160;&#160;&#160;2. 爱奇艺视频
+        这是一个Xposed插件，用于去除某些视频播放器的视频广告以及使用音乐播放器Vip。
     </string>
 
     <string name="plugin_usage_intro_title">使用方法</string>
@@ -13,7 +11,7 @@
         Root环境：\n
         直接接入Xposed框架，安装此apk，然后在Xposed插件管理器中开启这个插件即可。\n\n
         非Root环境：\n
-        使用Xpatch工具对腾讯视频或者爱奇艺重打包，卸载原来的app，安装重打包后的app，安装此插件，启动腾讯视频或者爱奇艺，即可实现视频去广告。\n\n
+        使用Xpatch工具对App重打包，卸载原来的app，安装重打包后的app，安装此插件，启动App，即可实现视频去广告。\n\n
         &#160;&#160;&#160;&#160;Xpatch源码：\n
         &#160;&#160;&#160;&#160;https://github.com/WindySha/Xpatch \n\n
         &#160;&#160;&#160;&#160;Xpatch工具下载目录：\n
@@ -27,20 +25,6 @@
         先下载Xpatch Jar包\n
         在PC上在命令行中运行如下命令：\n\n
         $ java -jar ../xpatch.jar ../tencent_video.apk \n\n
-
-        这条命令之后，在原apk文件(tencent_video.apk)相同的文件夹中，会生成一个名称为tencent_video-xposed-signed.apk的新apk，
-        这就是重打包之后的支持xposed插件的apk，卸载原腾讯视频app，安装此apk以及插件apk后，就可以实现腾讯视频去广告。\n\n
-
-        另外：\n
-        也可以将此插件打包到腾讯视频apk中，这样，此apk就自带去广告的功能，命令如下：\n\n
-        $ java -jar ../xpatch.jar ../tencent_video.apk -xm ../xposed_plugin.apk
-    </string>
-
-
-    <string name="attention_title">注意事项</string>
-    <string name="attention_content">
-        1. 爱奇艺去广告功能有个缺陷，每次点击一个视频播放后，依旧会播放广告，需要退出该视频，再重新播放一次，才会无广告；\n\n
-        2.原则上对腾讯视频和爱奇艺版本没有要求，但是太早的版本应该支持不太好。\n\n\n\n
     </string>
 
 </resources>

@@ -53,19 +53,5 @@
                 app:layout_constraintTop_toBottomOf="@id/title3"
                 android:id="@+id/content3"/>
 
-        <TextView
-                android:text="@string/attention_title"
-                style="@style/TextViewTitleStyle"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/content3"
-                android:id="@+id/title4"/>
-        <TextView
-                android:text="@string/attention_content"
-                style="@style/TextViewContentStyle"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/title4"
-                android:id="@+id/content4"/>
     </android.support.constraint.ConstraintLayout>
 </ScrollView>
