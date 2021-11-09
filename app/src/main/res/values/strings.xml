@@ -3,7 +3,7 @@
 
     <string name="function_intro_title">功能简介</string>
     <string name="function_intro_content">
-        这是一个Xposed插件，用于去除某些视频播放器的视频广告以及使用音乐播放器Vip。
+        这是一个Xposed插件。
     </string>
 
     <string name="plugin_usage_intro_title">使用方法</string>
